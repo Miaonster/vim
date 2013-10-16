@@ -29,7 +29,7 @@ Bundle 'git://git.wincent.com/command-t.git'
 " Plugins
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'The-NERD-Commenter'
 Bundle 'matchit.zip'
 Bundle 'ctrlp.vim'
