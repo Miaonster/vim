@@ -1,13 +1,13 @@
 #!/bin/sh
 
 if [ -d "$HOME/.vim" ]; then
-    mv ~/.vim ~/.vim.`date +%Y%m%d`
+    mv ~/.vim ~/.vim.`date +%Y%m%d%H%M%S`
 fi
 
 git clone https://github.com/Witcher42/vim.git ~/.vim
 
 if [ -f "$HOME/.vimrc" ]; then
-    mv ~/.vimrc ~/.vimrc.`date +%Y%m%d`
+    mv ~/.vimrc ~/.vimrc.`date +%Y%m%d%H%M%S`
 fi
 
 ln -s ~/.vim/vimrc ~/.vimrc
