@@ -37,7 +37,8 @@ Bundle 'L9'
 " Bundle 'wincent/Command-T'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'ctrlp.vim'
-map <c-p> :CtrlPCurWD <cr>
+map <c-p><c-p> :CtrlP <cr>
+map <c-p><c-o> :CtrlPCurWD <cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " VIM Theme
