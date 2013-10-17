@@ -63,7 +63,6 @@ Bundle 'Lokaltog/vim-easymotion'
 let g:EasyMotion_leader_key = '<Leader><Leader>'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
 " VIM StatusLine
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'bling/vim-airline'
@@ -73,6 +72,7 @@ let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#show_buffers = 1
 " let g:airline#extensions#bufferline#enabled = 1
+let g:airline#extensions#branch#enabled = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "
@@ -103,7 +103,7 @@ Bundle 'lunaru/vim-less'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'The-NERD-tree'
 " 设置相对行号
-nmap <Tab><Tab> :NERDTree <cr> :set rnu <cr>
+nmap ,<Tab> :NERDTree <cr> :set rnu <cr>
 let NERDTreeShowBookmarks=1
 let NERDTreeShowFiles=1
 let NERDTreeShowHidden=1
