@@ -37,6 +37,7 @@ Bundle 'L9'
 " Bundle 'wincent/Command-T'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'ctrlp.vim'
+map <c-p> :CtrlPCurWD <cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " VIM Theme
@@ -162,6 +163,7 @@ func SetEncodingUTF8()
     :set termencoding=gbk
 endfun
 
+nmap <C-S-t> :sp<bar>:b#<CR>
 nmap <C-j>  :tabnext <CR>
 nmap <C-k>  :tabprevious <CR>
 map  <F11>     :call SetEncodingUTF8() <CR>
