@@ -56,8 +56,6 @@ Bundle 'The-NERD-Commenter'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'matchit.zip'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'lunaru/vim-less'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'vim-multiple-cursors'
 let g:multi_cursor_use_default_mapping=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -73,6 +71,8 @@ set laststatus=2
 let g:airline_theme = 'solarized'
 let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#show_buffers = 1
+" let g:airline#extensions#bufferline#enabled = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "
@@ -85,7 +85,7 @@ Bundle 'actionscript.vim'
 au BufNewFile,BufRead *.as setf actionscript
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Javascript && CSS && HTML 
+" Javascript && CSS && HTML
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle "pangloss/vim-javascript"
 let g:html_indent_inctags = "html,body,head,tbody"
@@ -95,19 +95,21 @@ let g:html_indent_style1 = "inc"
 Bundle 'ZenCoding.vim'
 let g:user_zen_leader_key = '<S-Tab>'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'lunaru/vim-less'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Bundle 'Sass'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Bundle 'UltiSnips'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Bundle 'The-NERD-tree'
+Bundle 'The-NERD-tree'
 " 设置相对行号
-" nmap <Tab><Tab> :NERDTree<cr>:set rnu<cr>
-" let NERDTreeShowBookmarks=1
-" let NERDTreeShowFiles=1
-" let NERDTreeShowHidden=1
-" let NERDTreeIgnore=['\.$','\~$']
-" let NERDTreeShowLineNumbers=1
-" let NERDTreeWinPos=1
+nmap <Tab><Tab> :NERDTree <cr> :set rnu <cr>
+let NERDTreeShowBookmarks=1
+let NERDTreeShowFiles=1
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.$','\~$']
+let NERDTreeShowLineNumbers=1
+let NERDTreeWinPos=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin indent on     " required!
@@ -147,18 +149,21 @@ set shiftwidth=4
 "set cindent
 
 "set textwidth=80
-"set linebreak
+set linebreak
 set backspace=2
 set hlsearch
 set incsearch
 set showmatch
+
+"set mouse=a
 
 func SetEncodingUTF8()
     :set encoding=utf8
     :set termencoding=gbk
 endfun
 
-nmap <C-q> <C-q> = :tabnext <ESC>
+nmap <C-j>  :tabnext <CR>
+nmap <C-k>  :tabprevious <CR>
 map  <F11>     :call SetEncodingUTF8() <CR>
 imap <F11>     <Esc>:call SetEncodingUTF8() <CR>
 map <F2> :nohl <CR>
