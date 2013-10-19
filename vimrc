@@ -191,9 +191,9 @@ if has("autocmd")
     filetype plugin on
     filetype indent on
 
-    autocmd FileType h,c,cc,cpp set ts=2 sw=2 cindent expandtab
+    autocmd FileType h,c,cc,cpp,sh set ts=2 sw=2 cindent expandtab
     autocmd FileType js,javascript,html,scss,css,json set ts=2 sw=2 noautoindent expandtab
-    autocmd FileType php,python,sh set ts=4 sw=4 cindent expandtab
+    autocmd FileType php,python set ts=4 sw=4 cindent expandtab
     autocmd FileType as,actionscript set ts=4 sw=4 expandtab autoindent smartindent
 endif
 
