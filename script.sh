@@ -18,15 +18,15 @@ function install() {
   git submodule init
   git submodule update
 
-  vim +BundleInstall +qall! </dev/tty
+  vim +BundleInstall! +qall! </dev/tty
 
-  (cd ~/.vim/bundle/YouCompleteMe; ./install.sh --clang-completer)
+  #(cd ~/.vim/bundle/YouCompleteMe; ./install.sh --clang-completer)
 }
 
 
 function update() {
   (cd ~/.vim; git pull)
-  vim +BundleClean +BundleInstall +qall! </dev/tty
+  vim +BundleClean! +BundleInstall +qall! </dev/tty
 }
 
 for arg in "$@"
