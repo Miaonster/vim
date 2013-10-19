@@ -26,7 +26,7 @@ function install() {
 
 function update() {
   echo "update";
-  git pull
+  (cd ~/.vim; git pull)
   vim +BundleClean +BundleInstall +qall! </dev/tty
 }
 
