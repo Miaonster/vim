@@ -79,6 +79,7 @@ Bundle 'bufexplorer.zip'
 Bundle 'bling/vim-airline'
 set laststatus=2
 let g:airline_theme = 'solarized'
+highlight Search guifg=#b58900 gui=reverse guibg=NONE term=reverse ctermfg=NONE cterm=reverse ctermbg=NONE
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -195,3 +196,4 @@ if has("autocmd")
     autocmd FileType php,python,sh set ts=4 sw=4 cindent expandtab
     autocmd FileType as,actionscript set ts=4 sw=4 expandtab autoindent smartindent
 endif
+
