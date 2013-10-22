@@ -105,8 +105,8 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'ZenCoding.vim'
-let g:user_zen_leader_key = '<S-Tab>'
+Bundle 'mattn/emmet-vim'
+let g:user_zen_leader_key = '<c-y>'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'lunaru/vim-less'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
