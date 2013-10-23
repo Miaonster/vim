@@ -114,6 +114,9 @@ Bundle 'lunaru/vim-less'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Bundle 'UltiSnips'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'phtml.vim'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 Bundle 'The-NERD-tree'
 " 设置相对行号
 nmap ,<Tab> :NERDTree <cr> :set rnu <cr>
@@ -193,7 +196,7 @@ if has("autocmd")
 
     autocmd FileType h,c,cc,cpp,sh set ts=2 sw=2 cindent expandtab
     autocmd FileType js,javascript,html,scss,css,json set ts=2 sw=2 noautoindent expandtab
-    autocmd FileType php,python set ts=4 sw=4 cindent expandtab
+    autocmd FileType php,python,phtml set ts=4 sw=4 autoindent expandtab
     autocmd FileType as,actionscript set ts=4 sw=4 expandtab autoindent smartindent
 endif
 
