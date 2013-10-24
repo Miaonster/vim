@@ -188,6 +188,17 @@ map <F6> :set invpaste <CR>
 map <F5> :set invnumber <CR>
 nnoremap <silent> <F12> :A<CR>
 
+set wmh=0
+
+nmap <leader>w <c-w>
+nmap <c-w>e <c-w>_
+nmap <c-w>r <c-w>=
+
+nmap <c-k> <c-w>k<c-w>=
+nmap <c-j> <c-w>j<c-w>=
+nmap <c-h> <c-w>h<c-w>=
+nmap <c-l> <c-w>l<c-w>=
+
 if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
@@ -199,4 +210,3 @@ if has("autocmd")
     autocmd FileType php,python,phtml set ts=4 sw=4 autoindent expandtab
     autocmd FileType as,actionscript set ts=4 sw=4 expandtab autoindent smartindent
 endif
-
