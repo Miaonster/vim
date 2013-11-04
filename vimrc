@@ -171,6 +171,9 @@ set hlsearch
 set incsearch
 set showmatch
 
+set listchars=tab:▸\ ,trail:·
+set list
+
 "set mouse=a
 
 func SetEncodingUTF8()

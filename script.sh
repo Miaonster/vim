@@ -1,6 +1,6 @@
 #!/bin/sh
 
-function install() {
+install() {
   if [ -d "$HOME/.vim" ]; then
     mv ~/.vim ~/.vim.`date +%Y%m%d%H%M%S`
   fi
@@ -24,9 +24,9 @@ function install() {
 }
 
 
-function update() {
+update() {
   (cd ~/.vim; git pull)
-  vim +BundleClean! +BundleInstall +qall! </dev/tty
+  vim +BundleClean +BundleInstall +qall! </dev/tty
 }
 
 for arg in "$@"
