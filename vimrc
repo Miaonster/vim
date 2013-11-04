@@ -206,7 +206,7 @@ if has("autocmd")
     filetype indent on
 
     autocmd FileType h,c,cc,cpp,sh set ts=2 sw=2 cindent expandtab
-    autocmd FileType js,javascript,html,scss,css,json,less set ts=2 sw=2 autoindent expandtab
+    autocmd FileType js,javascript,html,scss,css,json,less set ts=4 sw=4 autoindent expandtab
     autocmd FileType php,python,phtml set ts=4 sw=4 autoindent expandtab
     autocmd FileType as,actionscript set ts=4 sw=4 expandtab autoindent smartindent
 endif
