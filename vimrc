@@ -117,6 +117,8 @@ Bundle 'hail2u/vim-css3-syntax'
 " Bundle 'UltiSnips'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'phtml.vim'
+Bundle 'html5.vim'
+Bundle 'HTML5-Syntax-File'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Bundle 'The-NERD-tree'
