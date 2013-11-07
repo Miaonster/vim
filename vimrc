@@ -37,8 +37,8 @@ Bundle 'L9'
 " Bundle 'wincent/Command-T'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'ctrlp.vim'
-map <c-p><c-p> :CtrlP <cr>
-map <c-p><c-o> :CtrlPCurWD <cr>
+nmap <c-p><c-p> :CtrlP <cr>
+nmap <c-p><c-o> :CtrlPCurWD <cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " VIM Theme
@@ -60,6 +60,11 @@ Bundle 'matchit.zip'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'vim-multiple-cursors'
 let g:multi_cursor_use_default_mapping=0
+" " Default mapping
+" let g:multi_cursor_next_key='<C-n>'
+" let g:multi_cursor_prev_key='<C-p>'
+" let g:multi_cursor_skip_key='<C-x>'
+" let g:multi_cursor_quit_key='<Esc>'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'Lokaltog/vim-easymotion'
 let g:EasyMotion_leader_key = '<Leader><Leader>'
