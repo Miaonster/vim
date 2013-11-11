@@ -72,12 +72,17 @@ let g:EasyMotion_leader_key = '<Leader><Leader>'
 " Bundle 'airblade/vim-gitgutter'
 " highlight clear SignColumn
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'junegunn/vim-easy-align'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 " Buffer Switcher
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Usage: <Leader>be
 Bundle 'bufexplorer.zip'
-" <Leader>be
+vnoremap <silent> <Enter> :EasyAlign<Enter>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 " VIM StatusLine
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
