@@ -74,6 +74,9 @@ let g:EasyMotion_leader_key = '<Leader><Leader>'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'junegunn/vim-easy-align'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'nginx.vim'
+au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 " Buffer Switcher
