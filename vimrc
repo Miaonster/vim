@@ -193,16 +193,9 @@ set list
 
 "set mouse=a
 
-func SetEncodingUTF8()
-    :set encoding=utf8
-    :set termencoding=gbk
-endfun
-
 nmap <C-S-t> :sp<bar>:b#<CR>
 nmap <C-j>  :tabnext <CR>
 nmap <C-k>  :tabprevious <CR>
-map  <F11>     :call SetEncodingUTF8() <CR>
-imap <F11>     <Esc>:call SetEncodingUTF8() <CR>
 map <F2> :nohl <CR>
 map <F6> :set invpaste <CR>
 map <F5> :set invnumber <CR>
