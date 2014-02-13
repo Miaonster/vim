@@ -11,7 +11,8 @@ install() {
     mv ~/.vimrc ~/.vimrc.`date +%Y%m%d%H%M%S`
   fi
 
-  ln -s ~/.vim/vimrc ~/.vimrc
+  #ln -s ~/.vim/vimrc ~/.vimrc
+  cp ~/.vim/vimrc.template ~/.vimrc
 
   cd ~/.vim
 
@@ -22,7 +23,6 @@ install() {
 
   #(cd ~/.vim/bundle/YouCompleteMe; ./install.sh --clang-completer)
 }
-
 
 update() {
   (cd ~/.vim; git pull)
