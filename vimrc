@@ -1,163 +1,164 @@
-set nocompatible
-
 syntax enable
-
+set nocompatible
 let mapleader = ","
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" BEING Vundle
+"                                                                         "
+"                                  Vundle                                 "
+"                                                                         "
+"                                                                         "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" required!
-filetype off
-
-set rtp+=~/.vim/bundle/vundle/
+filetype off "required!
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
-" let Vundle manage Vundle required!
+                      """""""""""""""""""""""""""""""""""""
+                      "                                   "
+                      "               Base                "
+                      "                                   "
+                      "                                   "
+                      """""""""""""""""""""""""""""""""""""
+
+" Basic "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'gmarik/Vundle.vim'
-
-"
-" My Bundles
-"
-
-" Base
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'tpope/vim-fugitive'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'tpope/vim-rails.git'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'L9'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Fast Navigation
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Bundle 'FuzzyFinder'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Bundle 'wincent/Command-T'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'ctrlp.vim'
-nmap <c-p><c-p> :CtrlP <cr>
-nmap <c-p><c-o> :CtrlPCurWD <cr>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" VIM Theme
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Theme "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'Solarized'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" VIM Improve
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Bundle 'Valloric/YouCompleteMe'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Navigate "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'ctrlp.vim'
+    nmap <c-p><c-p> :CtrlP <cr>
+    nmap <c-p><c-o> :CtrlPCurWD <cr>
+" Bundle 'FuzzyFinder'
+" Bundle 'wincent/Command-T'
+
+
+
+                      """""""""""""""""""""""""""""""""""""
+                      "                                   "
+                      "            VIM Improve            "
+                      "                                   "
+                      "                                   "
+                      """""""""""""""""""""""""""""""""""""
+
+" Basic "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'rizzatti/funcoo.vim'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'rizzatti/dash.vim'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'The-NERD-Commenter'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'matchit.zip'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'vim-multiple-cursors'
-let g:multi_cursor_use_default_mapping=0
-" " Default mapping
-" let g:multi_cursor_next_key='<C-n>'
-" let g:multi_cursor_prev_key='<C-p>'
-" let g:multi_cursor_skip_key='<C-x>'
-" let g:multi_cursor_quit_key='<Esc>'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" Shortcuts "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'Lokaltog/vim-easymotion'
-let g:EasyMotion_leader_key = '<Leader><Leader>'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Bundle 'airblade/vim-gitgutter'
-" highlight clear SignColumn
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    let g:EasyMotion_leader_key = '<Leader><Leader>'
+    " usage: <Leader><Leader>fx
+
+Bundle 'The-NERD-tree'
+    nmap ,<Tab> :NERDTree <cr> :set rnu <cr>
+    let NERDTreeIgnore          = ['\.$','\~$']
+    let NERDTreeShowBookmarks   = 1
+    let NERDTreeShowFiles       = 1
+    let NERDTreeShowHidden      = 1
+    let NERDTreeShowLineNumbers = 1
+    let NERDTreeWinPos          = 1
+    " usage: ,<Tab>
+
 Bundle 'junegunn/vim-easy-align'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " usage: select & <Enter>
+
 Bundle 'nginx.vim'
-au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/*,/usr/local/etc/nginx/* if &ft == '' | setfiletype nginx | endif 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/*,/usr/local/etc/nginx/* if &ft == '' | setfiletype nginx | endif
+
+" Bundle 'Valloric/YouCompleteMe'
+" Bundle 'airblade/vim-gitgutter'
+    " highlight clear SignColumn
+
+" Bundle 'terryma/vim-multiple-cursors'
+    " let g:multi_cursor_use_default_mapping = 1
+    " let g:multi_cursor_next_key='<C-n>'
+    " let g:multi_cursor_prev_key='<C-p>'
+    " let g:multi_cursor_skip_key='<C-x>'
+    " let g:multi_cursor_quit_key='<Esc>'
 
 
-" Buffer Switcher
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Usage: <Leader>be
+" Buffer Switcher "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'bufexplorer.zip'
-vnoremap <silent> <Enter> :EasyAlign<Enter>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    vnoremap <silent> <Enter> :EasyAlign<Enter>
+    " usage: <Leader>be
 
 
-" VIM StatusLine
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM StatusLine "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'bling/vim-airline'
-set laststatus=2
-let g:airline_theme = 'solarized'
-highlight Search guifg=#b58900 gui=reverse guibg=NONE term=reverse ctermfg=NONE cterm=reverse ctermbg=NONE
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#bufferline#enabled = 1
-" let g:airline#extensions#hunks#enabled = 1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    set laststatus=2
+    highlight Search guifg=#b58900 gui=reverse guibg=NONE term=reverse ctermfg=NONE cterm=reverse ctermbg=NONE
+    let g:airline_theme = 'solarized'
+    let g:airline_powerline_fonts = 1
+    let g:airline#extensions#branch#enabled = 1
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#show_buffers = 1
+    let g:airline#extensions#bufferline#enabled = 1
+    " let g:airline#extensions#hunks#enabled = 1
 
-"
-" Programming Plugins
-"
 
-" ActionScript
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+                      """""""""""""""""""""""""""""""""""""
+                      "                                   "
+                      "        Programming Plugins        "
+                      "                                   "
+                      "                                   "
+                      """""""""""""""""""""""""""""""""""""
+
+" ActionScript "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'actionscript.vim'
 au BufNewFile,BufRead *.as setf actionscript
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Javascript && CSS && HTML
+" Javascript && CSS && HTML "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle "pangloss/vim-javascript"
-let g:html_indent_inctags = "html,body,head,tbody"
-let g:html_indent_script1 = "inc"
-let g:html_indent_style1 = "inc"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'mattn/emmet-vim'
-let g:user_zen_leader_key = '<c-y>'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'groenewege/vim-less'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'hail2u/vim-css3-syntax'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Bundle 'Sass'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Bundle 'UltiSnips'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'phtml.vim'
 Bundle 'html5.vim'
 Bundle 'HTML5-Syntax-File'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle "pangloss/vim-javascript"
+    let g:html_indent_inctags = "html,body,head,tbody"
+    let g:html_indent_script1 = "inc"
+    let g:html_indent_style1 = "inc"
+Bundle 'mattn/emmet-vim'
+    let g:user_zen_leader_key = '<c-y>'
+" Bundle 'Sass'
+" Bundle 'UltiSnips'
 
-Bundle 'The-NERD-tree'
-" 设置相对行号
-nmap ,<Tab> :NERDTree <cr> :set rnu <cr>
-let NERDTreeShowBookmarks=1
-let NERDTreeShowFiles=1
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.$','\~$']
-let NERDTreeShowLineNumbers=1
-let NERDTreeWinPos=1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin indent on     " required!
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"  Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-"  see :h vundle for more details or wiki for FAQ
-"  NOTE: comments after Bundle command are not allowed..
+"                                                                         "
+"                                End Vundle                               "
+"                                                                         "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" END Vundle
+" Help:                                                                   "
+"   :BundleList          - list configured bundles                        "
+"   :BundleInstall(!)    - install(update) bundles                        "
+"   :BundleSearch(!) foo - search(or refresh cache first) for foo         "
+"   :BundleClean(!)      - confirm(or auto-approve) removal of            "
+"                               unused bundles                            "
+"                                                                         "
+" See:  :h vundle for more details or wiki for FAQ                        "
+" NOTE: comments after Bundle command are not allowed..                   "
+"                                                                         "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set backspace=indent,eol,start
