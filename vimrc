@@ -138,7 +138,7 @@ Bundle "pangloss/vim-javascript"
     let g:html_indent_script1 = "inc"
     let g:html_indent_style1 = "inc"
 Bundle 'mattn/emmet-vim'
-    let g:user_zen_leader_key = '<c-y>'
+    let g:user_zen_leader_key = '<c-,>'
 " Bundle 'Sass'
 " Bundle 'UltiSnips'
 
