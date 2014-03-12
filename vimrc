@@ -146,10 +146,6 @@ Bundle 'mattn/emmet-vim'
 filetype plugin indent on     " required!
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                                                         "
-"                                End Vundle                               "
-"                                                                         "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Help:                                                                   "
 "   :BundleList          - list configured bundles                        "
 "   :BundleInstall(!)    - install(update) bundles                        "
@@ -159,6 +155,10 @@ filetype plugin indent on     " required!
 "                                                                         "
 " See:  :h vundle for more details or wiki for FAQ                        "
 " NOTE: comments after Bundle command are not allowed..                   "
+"                                                                         "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                                                         "
+"                                End Vundle                               "
 "                                                                         "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
