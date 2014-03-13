@@ -138,9 +138,9 @@ Bundle "pangloss/vim-javascript"
     let g:html_indent_script1 = "inc"
     let g:html_indent_style1 = "inc"
 Bundle 'mattn/emmet-vim'
-    let g:user_emmet_leader_key='<C-w>'
-    " usage: <C-w>, Zen coding
-    "        <C-w>n Jump to next editable place
+    let g:user_emmet_leader_key='<C-e>'
+    " usage: <C-e>, Zen coding
+    "        <C-e>n Jump to next editable place
 
 " Bundle 'Sass'
 " Bundle 'UltiSnips'
