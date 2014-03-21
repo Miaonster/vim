@@ -106,12 +106,24 @@ Bundle 'bling/vim-airline'
     set laststatus=2
     highlight Search guifg=#b58900 gui=reverse guibg=NONE term=reverse ctermfg=NONE cterm=reverse ctermbg=NONE
     let g:airline_theme = 'solarized'
+    let g:solarized_termcolors = 16
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#branch#enabled = 1
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#show_buffers = 1
     let g:airline#extensions#bufferline#enabled = 1
     " let g:airline#extensions#hunks#enabled = 1
+    let g:airline_theme_patch_func = 'AirlineThemePatch'
+    function! AirlineThemePatch(palette)
+      if g:airline_theme == 'solarized'
+        for colors in values(a:palette.inactive)
+          let colors[0] = '#93a1a1'
+          let colors[1] = '#000000'
+          let colors[2] = 14
+          let colors[3] = 7
+        endfor
+      endif
+    endfunction
 
 
                       """""""""""""""""""""""""""""""""""""
@@ -144,6 +156,7 @@ Bundle 'mattn/emmet-vim'
 
 " Bundle 'Sass'
 " Bundle 'UltiSnips'
+
 
 
 filetype plugin indent on     " required!
