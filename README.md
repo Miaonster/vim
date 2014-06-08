@@ -7,13 +7,13 @@ This is my VIM configuration. You can have a try by running the installation com
 ### INSTALLATION
 
 ```
-curl "https://raw.github.com/Witcher42/vim/master/script.sh" | bash -s install
+curl "https://raw.githubusercontent.com/Witcher42/vim/master/script.sh" | bash -s install
 ```
 
 ### UPDATE
 
 ```
-curl "https://raw.github.com/Witcher42/vim/master/script.sh" | bash -s update
+curl "https://raw.githubusercontent.com/Witcher42/vim/master/script.sh" | bash -s update
 ```
 
 ### Screen Shot
