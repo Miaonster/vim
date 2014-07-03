@@ -8,10 +8,12 @@ let mapleader = ","
 "                                                                         "
 "                                                                         "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-filetype off "required!
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
                       """""""""""""""""""""""""""""""""""""
                       "                                   "
@@ -22,24 +24,24 @@ call vundle#rc()
 
 " Basic "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'gmarik/Vundle.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails.git'
-Bundle 'L9'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails.git'
+Plugin 'L9'
 
 
 " Theme "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'Solarized'
+Plugin 'Solarized'
 
 
 " Navigate "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'ctrlp.vim'
+Plugin 'ctrlp.vim'
     nmap <c-p><c-p> :CtrlP <cr>
     nmap <c-p><c-o> :CtrlPCurWD <cr>
-" Bundle 'FuzzyFinder'
-" Bundle 'wincent/Command-T'
+" Plugin 'FuzzyFinder'
+" Plugin 'wincent/Command-T'
 
 
 
@@ -52,19 +54,19 @@ Bundle 'ctrlp.vim'
 
 " Basic "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'rizzatti/dash.vim'
-Bundle 'The-NERD-Commenter'
-Bundle 'matchit.zip'
+Plugin 'rizzatti/funcoo.vim'
+Plugin 'rizzatti/dash.vim'
+Plugin 'The-NERD-Commenter'
+Plugin 'matchit.zip'
 
 
 " Shortcuts "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
     let g:EasyMotion_leader_key = '<Leader><Leader>'
     " usage: <Leader><Leader>fx
 
-Bundle 'The-NERD-tree'
+Plugin 'The-NERD-tree'
     nmap ,<Tab> :NERDTree <cr> :set rnu <cr>
     let NERDTreeIgnore          = ['\.$','\~$']
     let NERDTreeShowBookmarks   = 1
@@ -74,17 +76,17 @@ Bundle 'The-NERD-tree'
     let NERDTreeWinPos          = 1
     " usage: ,<Tab>
 
-Bundle 'junegunn/vim-easy-align'
+Plugin 'junegunn/vim-easy-align'
     " usage: select & <Enter>
 
-Bundle 'nginx.vim'
+Plugin 'nginx.vim'
     au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/*,/usr/local/etc/nginx/* if &ft == '' | setfiletype nginx | endif
 
-" Bundle 'Valloric/YouCompleteMe'
-" Bundle 'airblade/vim-gitgutter'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'airblade/vim-gitgutter'
     " highlight clear SignColumn
 
- Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
     let g:multi_cursor_use_default_mapping = 1
     " let g:multi_cursor_next_key='<C-n>'
     " let g:multi_cursor_prev_key='<C-p>'
@@ -92,17 +94,20 @@ Bundle 'nginx.vim'
     " let g:multi_cursor_quit_key='<Esc>'
     " usage: select & <C-n>
 
+Plugin 'supertab'
+"Plugin 'SirVer/ultisnips'
+
 
 " Buffer Switcher "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'bufexplorer.zip'
+Plugin 'bufexplorer.zip'
     vnoremap <silent> <Enter> :EasyAlign<Enter>
     " usage: <Leader>be
 
 
 " VIM StatusLine "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
     set laststatus=2
     highlight Search guifg=#b58900 gui=reverse guibg=NONE term=reverse ctermfg=NONE cterm=reverse ctermbg=NONE
     let g:airline_theme = 'solarized'
@@ -135,38 +140,39 @@ Bundle 'bling/vim-airline'
 
 " ActionScript "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'actionscript.vim'
+Plugin 'actionscript.vim'
 au BufNewFile,BufRead *.as setf actionscript
 
 " Javascript && CSS && HTML "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'groenewege/vim-less'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'phtml.vim'
-Bundle 'html5.vim'
-Bundle 'HTML5-Syntax-File'
-Bundle "pangloss/vim-javascript"
+Plugin 'groenewege/vim-less'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'phtml.vim'
+Plugin 'html5.vim'
+Plugin 'HTML5-Syntax-File'
+Plugin 'pangloss/vim-javascript'
     let g:html_indent_inctags = "html,body,head,tbody"
     let g:html_indent_script1 = "inc"
     let g:html_indent_style1 = "inc"
-Bundle 'mattn/emmet-vim'
+Plugin 'mattn/emmet-vim'
     let g:user_emmet_leader_key='<C-e>'
     " usage: <C-e>, Zen coding
     "        <C-e>n Jump to next editable place
 
-" Bundle 'Sass'
-" Bundle 'UltiSnips'
+" Plugin 'Sass'
+" Plugin 'UltiSnips'
 
 
-
-filetype plugin indent on     " required!
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Help:                                                                   "
-"   :BundleList          - list configured bundles                        "
-"   :BundleInstall(!)    - install(update) bundles                        "
-"   :BundleSearch(!) foo - search(or refresh cache first) for foo         "
-"   :BundleClean(!)      - confirm(or auto-approve) removal of            "
+"   :PluginList          - list configured bundles                        "
+"   :PluginInstall(!)    - install(update) bundles                        "
+"   :PluginSearch(!) foo - search(or refresh cache first) for foo         "
+"   :PluginClean(!)      - confirm(or auto-approve) removal of            "
 "                               unused bundles                            "
 "                                                                         "
 " See:  :h vundle for more details or wiki for FAQ                        "
