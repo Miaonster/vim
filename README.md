@@ -18,4 +18,4 @@ curl "https://raw.githubusercontent.com/Witcher42/vim/master/script.sh" | bash -
 
 ### Screen Shot
 
-![Screenshot of My Vim Configuration](./assets/screenshot-1.png)
+![Screenshot of My Vim Configuration](./assets/screenshot-2.png)
