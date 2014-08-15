@@ -65,6 +65,7 @@ Plugin 'matchit.zip'
 Plugin 'Lokaltog/vim-easymotion'
     let g:EasyMotion_leader_key = '<Leader><Leader>'
     " usage: <Leader><Leader>fx
+    " usage: <Leader><Leader>w
 
 Plugin 'The-NERD-tree'
     nmap ,<Tab> :NERDTree <cr> :set rnu <cr>
@@ -82,9 +83,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'nginx.vim'
     au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/*,/usr/local/etc/nginx/* if &ft == '' | setfiletype nginx | endif
 
-" Plugin 'Valloric/YouCompleteMe'
 " Plugin 'airblade/vim-gitgutter'
-    " highlight clear SignColumn
 
 Plugin 'terryma/vim-multiple-cursors'
     let g:multi_cursor_use_default_mapping = 1
@@ -94,9 +93,39 @@ Plugin 'terryma/vim-multiple-cursors'
     " let g:multi_cursor_quit_key='<Esc>'
     " usage: select & <C-n>
 
-Plugin 'supertab'
-"Plugin 'SirVer/ultisnips'
 
+" Complete & Promot"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"Plugin 'supertab'
+
+Plugin 'Valloric/YouCompleteMe'
+    let g:ycm_use_ultisnips_completer = 1
+    let g:ycm_key_list_select_completion = ['<Down>']
+    let g:ycm_key_list_previous_completion = ['<Up>']
+
+Plugin 'SirVer/ultisnips'
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+    "let g:UltiSnipsSnippetDirectories  = ["snips"]
+    function! g:UltiSnips_Complete()
+        call UltiSnips#ExpandSnippet()
+        if g:ulti_expand_res == 0
+            if pumvisible()
+                return "\<C-n>"
+            else
+                call UltiSnips#JumpForwards()
+                if g:ulti_jump_forwards_res == 0
+                   return "\<TAB>"
+                endif
+            endif
+        endif
+        return ""
+    endfunction
+    au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+
+Plugin 'honza/vim-snippets'
 
 " Buffer Switcher "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -160,8 +189,10 @@ Plugin 'mattn/emmet-vim'
     "        <C-e>n Jump to next editable place
 
 " Plugin 'Sass'
-" Plugin 'UltiSnips'
 
+" Plugin 'Shougo/neocomplete.vim'
+" Plugin 'Shougo/neosnippet'
+" Plugin 'Shougo/neosnippet-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -217,9 +248,9 @@ set list
 
 "set mouse=a
 
-nmap <C-S-t> :sp<bar>:b#<CR>
-nmap <C-j>  :tabnext <CR>
-nmap <C-k>  :tabprevious <CR>
+" nmap <C-S-t> :sp<bar>:b#<CR>
+" nmap <C-j>  :tabnext <CR>
+" nmap <C-k>  :tabprevious <CR>
 map <F2> :nohl <CR>
 map <F6> :set invpaste <CR>
 map <F5> :set invnumber <CR>
