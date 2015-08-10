@@ -177,7 +177,7 @@ au BufNewFile,BufRead *.as setf actionscript
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'phtml.vim'
-Plugin 'html5.vim'
+Plugin 'othree/html5.vim'
 Plugin 'HTML5-Syntax-File'
 Plugin 'pangloss/vim-javascript'
     let g:html_indent_inctags = "html,body,head,tbody"
@@ -187,6 +187,10 @@ Plugin 'mattn/emmet-vim'
     let g:user_emmet_leader_key='<C-e>'
     " usage: <C-e>, Zen coding
     "        <C-e>n Jump to next editable place
+Plugin 'jade.vim'
+Plugin 'vim-stylus'
+Plugin 'aaronj1335/underscore-templates.vim'
+Plugin 'burnettk/vim-angular'
 
 " Plugin 'Sass'
 
